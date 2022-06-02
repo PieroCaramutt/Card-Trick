@@ -81,14 +81,23 @@ public class CardTrickICE1 {
         user.setValue(ansTwo);//Set Value
         
         //step 3: match with array 
+        
+        boolean bool = false;
             for(int i=0; i<magicHand.length; i++){
-                if((user.getValue() == magicHand[i].getValue()) && (user.getSuits() == magicHand[i].getSuits())){
-                    System.out.println("Your card is in the Magic Hand!!");
+                if((user.getValue() == magicHand[i].getValue()) && (user.getSuits() == magicHand[i].getSuits()))
+                {bool = true;
+                break;
                 }
-                else
-                    System.out.println("Your card not match");
             }
-        }
+                   
+            
+            if(bool == true)
+                System.out.println("Your card is in the magic hand!");
+            else
+                System.out.println("Your card not match");
     }
+}
+
+ 
 
 
